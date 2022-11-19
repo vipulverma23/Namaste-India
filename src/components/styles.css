@@ -1,0 +1,251 @@
+body {
+	overflow: hidden; /* Hide scrollbars */
+}
+form{
+	text-align: center;
+	background-color: rgb(220, 104, 9);
+	font-size: 200%
+
+}
+button {
+	background-color: brown;
+}
+
+
+.bg {
+	background-image: url("https://source.unsplash.com/TApAkERW5pQ");
+	width: 100vw;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bidio {
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+}
+
+.east {
+	background-image: url("https://source.unsplash.com/RugN1OsUwHM");
+}
+.west {
+	background-image: url("https://source.unsplash.com/GdlEMsUsOy0");
+}
+.north {
+	background-image: url("https://source.unsplash.com/rqgquI7mBbA");
+}
+.south {
+	background-image: url("https://source.unsplash.com/ldAMcAiZ5v4");
+}
+
+/* arrows  css start*/
+
+@keyframes hoverAni {
+	from {
+		background-color: rgba(236, 236, 236, 0.075);
+	}
+	to {
+		background-color: rgba(122, 122, 122, 0.452);
+	}
+}
+.arrow {
+	position: absolute;
+	background-color: rgba(236, 236, 236, 0.075);
+	width: 50px;
+	height: 50px;
+	z-index: 1000;
+	border-radius: 50%;
+	font-size: larger;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: white;
+}
+
+.arrow:hover {
+	background-color: rgba(236, 236, 236, 0.178);
+	animation-name: hoverAni;
+	animation-duration: 1s;
+	color: rgb(65, 65, 65);
+}
+.up {
+	top: 10px;
+	left: 50vw;
+	transform: translate(-50%, 0%);
+}
+.down {
+	top: 90vh;
+	left: 50vw;
+
+	transform: translate(-50%, 0%);
+}
+.left {
+	top: 50vh;
+	left: 10px;
+
+	transform: translate(0%, -50%);
+}
+.right {
+	top: 50vh;
+	right: 10px;
+
+	transform: translate(0%, -50%);
+}
+
+/* arrows  css end*/
+/* text  css start*/
+
+@keyframes textShow {
+	from {
+		opacity: 0;
+		left: -100%;
+	}
+	to {
+		opacity: 1;
+		left: 50%;
+	}
+}
+
+.region {
+	color: rgba(88, 88, 88, 0.363);
+	font-size: 3em;
+	position: absolute;
+	margin-left: 20px;
+	animation-name: textShow;
+	animation-duration: 1s;
+}
+
+.title {
+	font-size: 10em;
+	font-weight: 900;
+	color: rgba(255, 255, 255, 0.842);
+	position: absolute;
+	text-align: center;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+}
+
+.northh1 {
+	color: rgb(255, 255, 255);
+}
+.southh1 {
+	color: rgb(80, 163, 196);
+}
+.easth1 {
+	color: rgb(240, 86, 86);
+}
+.westh1 {
+	color: rgb(62, 212, 99);
+}
+
+.mainpagetitle {
+	position: absolute;
+	bottom: 20px;
+	left: 10%;
+	font-size: 11em;
+	font-weight: 900;
+	color: white;
+}
+
+/*Carousel*/
+.carousel {
+	width: 100vw;
+	height: 200px;
+	position: absolute;
+	left: 10%;
+	top: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.carousel::-webkit-scrollbar {
+	width: 0;
+	background: transparent;
+}
+
+@keyframes display {
+	0% {
+		transform: translateX(200px);
+		opacity: 0.5;
+	}
+	10% {
+		transform: translateX(0px);
+		opacity: 0.7;
+	}
+	20% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+	30% {
+		transform: translateX(-150px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(-200px);
+		background-position-x: -20px;
+		opacity: 0;
+	}
+}
+
+.carousel > .box {
+	position: absolute;
+	top: 0;
+	left: calc(50% - 100px);
+	opacity: 0;
+	width: 400px;
+	height: 400px;
+	animation: display 8s infinite;
+}
+
+.carousel > .box #title {
+	position: absolute;
+	font-size: 40px;
+	font-weight: 600;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.box:nth-child(2) {
+	animation-delay: 2s;
+}
+.box:nth-child(3) {
+	animation-delay: 4s;
+}
+
+.box {
+	flex: 0 0 auto;
+	margin: 20px 40px;
+	color: white;
+	height: 350px;
+	min-width: 250px;
+	border-radius: 8px;
+	-webkit-box-shadow: 1px 13px 29px -6px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 1px 13px 29px -6px rgba(0, 0, 0, 0.75);
+	box-shadow: 1px 13px 29px -6px rgba(0, 0, 0, 0.75);
+}
+
+
+
+@media (max-width: 500px) {
+	.carousel {
+		display: none;
+	}
+	.title {
+		font-size: 5em;
+		font-weight: 700;
+		color: rgba(255, 255, 255, 0.842);
+		position: absolute;
+		text-align: center;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 100;
+	}
+	
+	
+}
