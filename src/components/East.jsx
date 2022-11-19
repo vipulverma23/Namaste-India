@@ -58,7 +58,7 @@ const About = styled.div`
   }
   
   animation-name: textShow;
-  animation-duration: 1s;
+  animation-duration: 2s;
 `;
 
 const Place = (props) => {
@@ -77,7 +77,7 @@ const Place = (props) => {
   );
 };
 
-const West = () => {
+const East = () => {
   const pageVariant = {
     initial: {
       opacity: 0,
@@ -134,4 +134,4 @@ const West = () => {
   );
 };
 
-export default West;
+export default East;

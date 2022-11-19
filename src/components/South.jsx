@@ -53,7 +53,7 @@ const About = styled.div`
     }
   }
   animation-name: textShow;
-  animation-duration: 1s;
+  animation-duration: 2s;
 `;
 
 const Place = (props) => {

@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { north } from "./Database";
 import ArrowDownwardRoundedIcon from "@material-ui/icons/ArrowDownwardRounded";
 import Carousel from "./Carousel";
+import { Description } from "@material-ui/icons";
 
 const Container = styled.div`
   display: flex;
@@ -25,15 +26,14 @@ const Item = styled.div`
   scroll-snap-align: start;
   height: 100vh;
   width: 100%;
-  text-decoration:none;
-  align-items:center;
+  text-decoration: none;
+  align-items: center;
   background-image: url(${(p) => p.s});
   background-color: #eac;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 `;
-
 
 const About = styled.div`
   height: 100%;
@@ -57,16 +57,18 @@ const About = styled.div`
     }
   }
   animation-name: textShow;
-  animation-duration: 1s;
+  animation-duration: 2s;
 `;
 
 const Place = (props) => {
-  const { s,d, city, att } = props;
+  const { s, d, city, att } = props;
   console.log(props);
   return (
     <Block>
       <Item s={s}>
-            <Link to='/form'> <button >Select Preferences</button>  </Link> 
+        <Link to="/form">
+          <button>Select Preferences</button>
+        </Link>
         <About>{city}</About>
         <Carousel cardData={att} />
       </Item>

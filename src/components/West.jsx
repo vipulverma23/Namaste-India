@@ -60,7 +60,7 @@ const About = styled.div`
     }
   }
   animation-name: textShow;
-  animation-duration: 1s;
+  animation-duration: 2s;
 `;
 
 const pageVariant = {
@@ -93,7 +93,7 @@ const Place = (props) => {
   return (
     <Block>
       <Item s={s}>
-        <Link to="/form">
+        <Link to="/form" >
           <button>Select Preferences</button>
         </Link>
         <About>{city}</About>
@@ -103,7 +103,7 @@ const Place = (props) => {
   );
 };
 
-const East = () => {
+const West = () => {
   return (
     <>
       <NavLink className="arrow right" to="/" exact>
@@ -135,4 +135,4 @@ const East = () => {
   );
 };
 
-export default East;
+export default West;

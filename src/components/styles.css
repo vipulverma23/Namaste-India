@@ -7,8 +7,18 @@ form{
 	font-size: 200%
 
 }
+
 button {
-	background-color: brown;
+	cursor: pointer;
+	background-color: turquoise;
+	align-items: center;
+	justify-content: center;
+
+}
+Link{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 
@@ -93,6 +103,11 @@ button {
 
 	transform: translate(0%, -50%);
 }
+/* Block{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+} */
 
 /* arrows  css end*/
 /* text  css start*/
