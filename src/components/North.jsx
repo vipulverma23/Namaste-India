@@ -6,7 +6,6 @@ import styled from "styled-components";
 import { north } from "./Database";
 import ArrowDownwardRoundedIcon from "@material-ui/icons/ArrowDownwardRounded";
 import Carousel from "./Carousel";
-import { Description } from "@material-ui/icons";
 
 const Container = styled.div`
   display: flex;

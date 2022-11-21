@@ -124,7 +124,7 @@ Link{
 }
 
 .region {
-	color: rgba(88, 88, 88, 0.363);
+	color: rgba(88, 88, 88, 0.434);
 	font-size: 3em;
 	position: absolute;
 	margin-left: 20px;
@@ -135,7 +135,7 @@ Link{
 .title {
 	font-size: 10em;
 	font-weight: 900;
-	color: rgba(255, 255, 255, 0.842);
+	color: orange;
 	position: absolute;
 	text-align: center;
 	top: 30%;
