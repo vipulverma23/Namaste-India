@@ -5,10 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { west } from "./Database";
 import Carousel from "./Carousel";
-//import ArrowBackRoundedIcon from "@material-ui/icons/ArrowBackRounded";
-//import ArrowDownwardRoundedIcon from "@material-ui/icons/ArrowDownwardRounded";
 import ArrowForwardRoundedIcon from "@material-ui/icons/ArrowForwardRounded";
-//import ArrowUpwardRoundedIcon from "@material-ui/icons/ArrowUpwardRounded";
 
 const Container = styled.div`
   display: flex;
@@ -88,12 +85,12 @@ const pageTransition = {
 };
 
 const Place = (props) => {
-  const { s,d, city, att } = props;
+  const { s, d, city, att } = props;
   console.log(props);
   return (
     <Block>
       <Item s={s}>
-        <Link to="/form" >
+        <Link to="/form">
           <button>Select Preferences</button>
         </Link>
         <About>{city}</About>
